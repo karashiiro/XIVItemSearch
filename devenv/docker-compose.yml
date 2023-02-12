@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  meili:
+    image: "getmeili/meilisearch:v1.0"
+    ports:
+      - "7700:7700"
+    environment:
+      MEILI_ENV: "development"
+    volumes:
+      - "./meili-data:/meili-data:rw"
